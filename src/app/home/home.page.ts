@@ -7,6 +7,13 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor() {
+
+  }
+
+  item1 = [
+    'おいしい牛丼',
+    '簡単なすき焼き'
+  ];
 
 }

@@ -10,24 +10,29 @@
 </ion-header>
 
 <ion-content>
-  <ion-slides>
-    <ion-slide>
-      <ion-card>
-        <ion-card-header>
-          <ion-card-title>실시간 베스트</ion-card-title>
-          <ion-card-subtitle>현재 가장 인기있는 레세피를 지금</ion-card-subtitle>
-        </ion-card-header>
-        <ion-card-content>
-          <ion-list>
-            <ion-item>맛있는 김치찌개</ion-item>
-            <ion-item>맛있는 김치찌개</ion-item>
-            <ion-item>맛있는 김치찌개</ion-item>
-            <ion-item>맛있는 김치찌개</ion-item>
-            <ion-item>맛있는 김치찌개</ion-item>
-            <ion-item>맛있는 김치찌개</ion-item>
-          </ion-list>
-        </ion-card-content>
-      </ion-card>
-    </ion-slide>
-  </ion-slides>
+  <div id="containerSkinA">
+    <ion-button expand="full" size="large" (click)='push(pushpage1);'>レシピを検索する</ion-button>
+  </div>
+
+  <div>
+    <h3 id='titleText'>今日のおすすめ</h3>
+  </div>
+  <div>
+    <h3 id='titleText'>ランキング</h3>
+    <ion-slides>
+      <ion-slide>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>リアルタイム·ベスト</ion-card-title>
+            <ion-card-subtitle>現在人気のレセピを見る</ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-list>
+              <ion-item *ngFor="let i of item1">{{i}}</ion-item>
+            </ion-list>
+          </ion-card-content>
+        </ion-card>
+      </ion-slide>
+    </ion-slides>
+  </div>
 </ion-content>
