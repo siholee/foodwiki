@@ -17,7 +17,8 @@ const routes: Routes = [
   },
   { path: 'post', loadChildren: './post/post.module#PostPageModule' },
   { path: 'search', loadChildren: './search/search.module#SearchPageModule' },
-  { path: 'rank', loadChildren: './rank/rank.module#RankPageModule' }
+  { path: 'rank', loadChildren: './rank/rank.module#RankPageModule' },
+  { path: 'option', loadChildren: './option/option.module#OptionPageModule' }
 ];
 
 @NgModule({

@@ -11,12 +11,9 @@
 
 <ion-content>
   <div id="containerSkinA">
-    <ion-button expand="full" size="large" (click)='push(pushpage1);'>レシピを検索する</ion-button>
+    <ion-button expand="full" size="large" (click)="moveSearch()">レシピを検索する</ion-button>
   </div>
 
-  <div>
-    <h3 id='titleText'>今日のおすすめ</h3>
-  </div>
   <div>
     <h3 id='titleText'>ランキング</h3>
     <ion-slides>
@@ -28,11 +25,22 @@
           </ion-card-header>
           <ion-card-content>
             <ion-list>
-              <ion-item *ngFor="let i of item1">{{i}}</ion-item>
+              <ion-item *ngFor="let i of database" (click)="movePost()">{{i.id}} {{i.title}}</ion-item>
             </ion-list>
           </ion-card-content>
         </ion-card>
       </ion-slide>
+      <ion-slide>
+        <ion-card>
+          <ion-card-title>最近大人気</ion-card-title>
+          <ion-card-subtitle></ion-card-subtitle>
+        </ion-card>
+      </ion-slide>
     </ion-slides>
   </div>
+
+  <div>
+      <h3 id='titleText'>今日のおすすめ</h3>
+  </div>
+
 </ion-content>

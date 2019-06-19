@@ -5,13 +5,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { PostPage } from './post.page';
-import { PostExactComponent } from './post-exact/post-exact.component';
+import { OptionPage } from './option.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: PostPage
+    component: OptionPage
   }
 ];
 
@@ -22,6 +21,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [PostPage]
+  declarations: [OptionPage]
 })
-export class PostPageModule {}
+export class OptionPageModule {}

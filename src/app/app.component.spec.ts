@@ -7,6 +7,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { RouterTestingModule } from '@angular/router/testing';
 
 import { AppComponent } from './app.component';
+import { PostExactComponent } from '../app/post/post-exact/post-exact.component';
 
 describe('AppComponent', () => {
 

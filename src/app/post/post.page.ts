@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GlobalService } from '../global.service';
 
 @Component({
   selector: 'app-post',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostPage implements OnInit {
 
-  constructor() { }
+  constructor(public globalvar:GlobalService) { }
 
   ngOnInit() {
   }
 
+  text : string = this.globalvar.postID;
 }

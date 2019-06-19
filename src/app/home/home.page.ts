@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import { NavController } from '@ionic/angular';
+import { Router } from '@angular/router';
+
+import { GlobalService } from '../global.service';
 
 @Component({
   selector: 'app-home',
@@ -7,13 +11,26 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {
+  constructor(private nav:NavController, private route:Router, public vari:GlobalService) {
 
   }
 
-  item1 = [
-    'おいしい牛丼',
-    '簡単なすき焼き'
+  database = [
+    {
+      id: 1,
+      title: 'おいしい牛丼'
+    },
+    {
+      id: 2,
+      title: '簡単なすき焼き'
+    }
   ];
 
+  movePost(){
+    this.nav.navigateForward('/post');
+  }
+
+  moveSearch(){
+    this.route.navigateByUrl("/option");
+  }
 }
